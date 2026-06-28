@@ -1,39 +1,39 @@
-import React, { useState } from 'react';
-import NavLink from './NavLink';
-import { Bars3Icon, XMarkIcon } from '@heroicons/react/24/solid';
-import MenuOverlay from './MenuOverlay';
+import React, { useState } from "react";
+import NavLink from "./NavLink";
+import { Bars3Icon, XMarkIcon } from "@heroicons/react/24/solid";
+import MenuOverlay from "./MenuOverlay";
+import { useAuth } from "../context/AuthContext";
 
 const navLinks = [
   {
-    
-    title: 'Home',
-    path: '#hero',
+    title: "Home",
+    path: "#hero",
   },
   {
-
-    title: 'About',
-    path: '#about',
+    title: "About",
+    path: "#about",
   },
   {
-    title: 'Education',
-    path: '#education',
-  },
-    {
-    title: 'Skills',
-    path: '#skills',
+    title: "Education",
+    path: "#education",
   },
   {
-    title: 'Projects',
-    path: '#projects',
+    title: "Skills",
+    path: "#skills",
   },
   {
-    title: 'Contact',
-    path: '#contact',
+    title: "Projects",
+    path: "#projects",
+  },
+  {
+    title: "Contact",
+    path: "#contact",
   },
 ];
 
-const Navbar = () => {
+const Navbar = ({ onOpenLogin, onOpenRegister }) => {
   const [navbarOpen, setNavbarOpen] = useState(false);
+  const { user, logout } = useAuth();
 
   return (
     <nav className="fixed inset-x-0 top-0 z-50 border-b border-white/10 bg-slate-950/70 backdrop-blur-xl">
@@ -76,6 +76,42 @@ const Navbar = () => {
               </li>
             ))}
 
+            {user ? (
+              <>
+                <li className="ml-4 text-sm text-slate-300 font-semibold">
+                  Hi, {user.name}
+                </li>
+                <li className="ml-2">
+                  <button
+                    onClick={logout}
+                    className="inline-flex items-center rounded-full border border-rose-500/30 bg-rose-500/10 px-4 py-1.5 text-sm font-semibold text-rose-300 transition hover:bg-rose-500/20 cursor-pointer"
+                  >
+                    Logout
+                  </button>
+                </li>
+              </>
+            ) : (
+              <>
+                <li className="ml-4">
+                  <button
+                    onClick={onOpenLogin}
+                    className="text-2 font-semibold text-slate-300 rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5  hover:border-white/30  hover:text-white transition cursor-pointer"
+                  >
+                    Login
+                  </button>
+                </li>
+                <li className="ml-2">
+                  <button
+                    onClick={onOpenRegister}
+                    className="inline-flex items-center rounded-full border border-purple-500/30 bg-purple-500/10 px-4 py-1.5 text-2 font-semibold text-purple-300 transition hover:bg-purple-500/20 cursor-pointer"
+                  >
+                    Register
+                  </button>
+                </li>
+              </>
+            )}
+            <div className="w-0.5 h-6 ml-2 border-1  text-gray-50" />
+
             <li className="ml-2">
               <a
                 href="#contact"
@@ -89,7 +125,14 @@ const Navbar = () => {
       </div>
 
       {navbarOpen && (
-        <MenuOverlay links={navLinks} onClose={() => setNavbarOpen(false)} />
+        <MenuOverlay
+          links={navLinks}
+          user={user}
+          logout={logout}
+          onOpenLogin={onOpenLogin}
+          onOpenRegister={onOpenRegister}
+          onClose={() => setNavbarOpen(false)}
+        />
       )}
     </nav>
   );

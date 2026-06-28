@@ -1,18 +1,16 @@
-import { TypeAnimation } from 'react-type-animation';
-import { motion } from 'framer-motion';
-import { ArrowDownRightIcon, SparklesIcon } from '@heroicons/react/24/outline';
+import { TypeAnimation } from "react-type-animation";
+import { motion } from "framer-motion";
+import { ArrowDownRightIcon, SparklesIcon } from "@heroicons/react/24/outline";
 
 const highlights = [
-  { label: 'Responsive Systems', value: 'Pixel Perfect' },
-  { label: 'Animation', value: 'Motion First' },
-  { label: 'Delivery', value: 'Production Ready' },
+  { label: "Responsive Systems", value: "Pixel Perfect" },
+  { label: "Animation", value: "Motion First" },
+  { label: "Delivery", value: "Production Ready" },
 ];
 
 export default function HeroSection() {
   return (
-    <section 
-    id="hero"
-    className="relative py-16 lg:py-24">
+    <section id="hero" className="relative py-16 lg:py-24">
       <div className="grid items-center gap-12 lg:grid-cols-[1.1fr_0.9fr]">
         {/* Left Content */}
         <motion.div
@@ -31,20 +29,18 @@ export default function HeroSection() {
               <span className="block bg-gradient-to-r from-purple-300 via-pink-300 to-cyan-300 bg-clip-text text-transparent">
                 Ram Pratap Maurya
               </span>
-              
             </h1>
             <h3 className="text-xl font-black leading-tight text-white sm:text-3xl lg:text-5xl">
-            
               <span className="block">I build modern web experiences.</span>
             </h3>
 
             <TypeAnimation
               sequence={[
-                'Full Stack Developer',
+                "Full Stack Developer",
                 1500,
-                'Backend Optimization...',
+                "Backend Optimization...",
                 1500,
-                'AI Integration...',
+                "AI Integration...",
                 1500,
               ]}
               speed={50}
@@ -79,24 +75,28 @@ export default function HeroSection() {
           </div>
 
           <div className="flex gap-5 ">
-          <a
-            href="https://github.com/Ram9369"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-13 w-13 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-          >
-            <img src="/github-icon.svg" alt="GitHub" className="h-5 w-5" />
-          </a>
+            <a
+              href="https://github.com/Ram9369"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-13 w-13 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+            >
+              <img src="/github-icon.svg" alt="GitHub" className="h-5 w-5" />
+            </a>
 
-          <a
-            href="https://www.linkedin.com/in/ram-pratap-maurya-2a14772ab/"
-            target="_blank"
-            rel="noopener noreferrer"
-            className="flex h-13 w-13 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)]"
-          >
-            <img src="/linkedin-icon.svg" alt="LinkedIn" className="h-5 w-5" />
-          </a>
-        </div>
+            <a
+              href="https://www.linkedin.com/in/ram-pratap-maurya-2a14772ab/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex h-13 w-13 items-center justify-center rounded-full border border-white/10 bg-white/5 transition hover:border-blue-500/40 hover:shadow-[0_0_20px_rgba(56,189,248,0.3)]"
+            >
+              <img
+                src="/linkedin-icon.svg"
+                alt="LinkedIn"
+                className="h-5 w-5"
+              />
+            </a>
+          </div>
 
           {/* Highlights */}
           <div className="grid gap-3 sm:grid-cols-3">
@@ -132,7 +132,7 @@ export default function HeroSection() {
             <div className="relative mt-10 overflow-hidden rounded-[1.5rem] border border-white/10 bg-slate-950/60  h-auto transition duration-300 hover:-translate-y-1  ">
               <img
                 src="/images/Ram_Img.png"
-                alt="Hero" 
+                alt="Hero"
                 className="h-full w-full object-cover rounded-[1.5rem] transition duration-500 hover:scale-105"
               />
             </div>
