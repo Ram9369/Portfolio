@@ -58,7 +58,7 @@ export default function HeroSection() {
           {/* Buttons */}
           <div className="flex flex-col justify-center gap-4 sm:flex-row lg:justify-start ">
             <a
-              href="/images/Ram_Resume.pdf"
+              href="/images/Resume-res.pdf"
               download="Ram_Pratap_Resume.pdf"
               className="inline-flex items-center justify-center p-3 gap-2 rounded-full bg-gradient-to-r from-purple-500 to-pink-500  py-3 font-semibold text-white shadow-lg shadow-purple-500/25 transition hover:-translate-y-2"
             >
