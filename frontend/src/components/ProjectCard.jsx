@@ -11,21 +11,21 @@ const ProjectCard = ({
 }) => {
   return (
     <a href={previewUrl} target="_blank" rel="noreferrer" className="block">
-      <article className="group overflow-hidden rounded-[1rem] border border-white/10 bg-white/5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-white/20 cursor-pointer">
-        <div className="relative h-64 overflow-hidden">
+      <article className="group overflow-hidden rounded-[1rem] border border-white/10 bg-white/5 shadow-xl shadow-black/20 transition duration-300 hover:-translate-y-1 hover:border-red-500 cursor-pointer">
+        <div className="relative h-64 overflow-hidden flex items-center justify-center">
           <img
             src={imgUrl}
             alt={title}
-            className="h-full w-full object-cover transition duration-500 group-hover:scale-105"
+            className="h-full w-full  flex justify-center object-cover transition duration-500 group-hover:scale-105"
           />
 
           <div className="absolute inset-0 bg-gradient-to-t from-slate-950 via-slate-950/30 to-transparent" />
 
-          <div className="absolute inset-x-0 top-0 flex flex-wrap gap-2 p-4">
+          <div className="absolute inset-x-0 top-0 flex flex-wrapgap-2 pt-8 px-3 ">
             {tags.slice(1).map((tag) => (
               <span
                 key={tag}
-                className="rounded-full border border-white/10 bg-slate-950/70 px-3 py-1 text-xs font-semibold text-slate-200 backdrop-blur"
+                className="rounded-full border border-blue-500 bg-slate-950/70 px-3 py-1 text-xs font-semibold text-slate-200 backdrop-blur"
               >
                 {tag}
               </span>
