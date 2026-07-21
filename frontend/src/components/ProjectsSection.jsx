@@ -1,3 +1,4 @@
+
 "use client";
 import React, { useState, useRef } from "react";
 import ProjectCard from "./ProjectCard";
@@ -7,16 +8,28 @@ import { motion, useInView } from "framer-motion";
 const projectsData = [
   {
     id: 1,
+    title: "Resume Reviewer - Personal Portfolio Template",
+    description:
+      "An AI-powered resume reviewer that analyzes resumes and provides feedback to help job seekers improve their chances of landing interviews.",
+    image: "images/projects/6.png",
+    tag: ["All", "Ai-Project 🤖"],
+    gitUrl: "https://github.com/Ram9369",
+    previewUrl: "#",
+  },
+
+  {
+    id: 2,
     title: "BlogSmith - Personal Blog Template",
     description:
       "A refined personal brand site with premium motion and clean information architecture.",
-    image: "/images/projects/1.png",
+    image: "images/projects/1.png",
     tag: ["All", "Project 🎓"],
     gitUrl: "https://github.com/Ram9369",
     previewUrl: "https://blog-smith-nu.vercel.app/",
   },
+
   {
-    id: 2,
+    id: 3,
     title: "Ram-gpt - AI-Powered GPT-Clone",
     description:
       "A ChatGPT Clone built with AI capabilities. It provides intelligent responses and interactive conversations, About 90% accurate as Originnal ChatGPT.",
@@ -27,7 +40,7 @@ const projectsData = [
   },
 
   {
-    id: 3,
+    id: 4,
     title: "JobeefieUrjaTech - E-commerce Platform",
 
     description:
@@ -37,8 +50,9 @@ const projectsData = [
     gitUrl: "https://github.com/Ram9369",
     previewUrl: "https://www.jobeefieurjatech.in/",
   },
+
   {
-    id: 4,
+    id: 5,
     title: "CaptGen - AI Powered Caption Generation",
     description:
       "An AI-powered caption generator that creates engaging and contextually relevant captions for social media posts, enhancing user engagement and content reach.",
@@ -48,23 +62,12 @@ const projectsData = [
     previewUrl: "https://example.com",
   },
   {
-    id: 5,
+    id: 6,
     title: "MoodyPlayer - AI-Powered Music Streaming App",
     description:
       "A music streaming app that uses AI to analyze user preferences and moods, providing personalized playlists and recommendations for an enhanced listening experience.",
     image: "/images/projects/5.png",
     tag: ["All", "Ai-Project 🤖"],
-    gitUrl: "https://github.com/Ram9369",
-    previewUrl: "https://example.com",
-  },
-
-  {
-    id: 6,
-    title: "Variyonic - E-commerce Platform",
-    description:
-      "An E-commerce plateform where manufacturers can sell their products, Retailor can list products and customers can buy them with ease.",
-    image: "/images/projects/3.png",
-    tag: ["All", "Project 🎓"],
     gitUrl: "https://github.com/Ram9369",
     previewUrl: "https://example.com",
   },
@@ -103,7 +106,7 @@ const ProjectsSection = () => {
           visually strong.
         </p>
       </div>
-      <div className="flex flex-wrap justify-center gap-3 py-6">
+      <div className="flex flex-wrap justify-center  gap-3 py-6">
         <ProjectTag
           onClick={handleTagChange}
           name="All"
@@ -145,3 +148,4 @@ const ProjectsSection = () => {
 };
 
 export default ProjectsSection;
+
